@@ -1,5 +1,6 @@
 <script lang="ts">
 	import LinkButton from './atoms/LinkButton.svelte';
+	import Logo from './atoms/Logo.svelte';
 </script>
 
 <header>
@@ -8,8 +9,7 @@
 		aria-label="Main"
 	>
 		<a href="/">
-			<!-- TODO: Add LOGO -->
-			LOGO
+			<Logo />
 		</a>
 		<LinkButton href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Features</LinkButton>
 	</nav>

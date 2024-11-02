@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Logo from './atoms/Logo.svelte';
+
 	const footerItem = [
 		{ label: 'Github', href: 'https://github.com/ntatoud' },
 		{ label: 'LinkedIn', href: 'https://www.linkedin.com/in/noetatoud' }
@@ -11,8 +13,7 @@
 		aria-label="Footer"
 	>
 		<a href="/">
-			<!-- TODO: Add LOGO -->
-			LOGO
+			<Logo />
 		</a>
 		<ul class="flex gap-6">
 			{#each footerItem as item (item.label)}
