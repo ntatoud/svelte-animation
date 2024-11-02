@@ -53,7 +53,7 @@
 		{#each bentoItems as item}
 			<div
 				class={clsx(
-					'row-span-3 grid grid-rows-subgrid gap-4 rounded-lg bg-black/60 p-4 ring-2 ring-gray-900',
+					'glass-container row-span-3 grid grid-rows-subgrid gap-4 rounded-lg bg-gray-950/60 p-4 ring-2 ring-gray-900',
 					item.isWide ? 'md:col-span-2' : 'md:col-span-1'
 				)}
 			>
