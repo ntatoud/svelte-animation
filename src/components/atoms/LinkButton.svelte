@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { PropsWithChildren } from '#components/types/utils';
 	import clsx from 'clsx';
-	import type { Snippet } from 'svelte';
 
-	type LinkButtonProps = { children: Snippet; className?: string; href: string };
+	type LinkButtonProps = PropsWithChildren<{ className?: string; href: string }>;
 
 	let { children, className, href }: LinkButtonProps = $props();
 

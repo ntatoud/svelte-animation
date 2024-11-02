@@ -1,8 +1,8 @@
 <script lang="ts">
+	import type { PropsWithChildren } from '#components/types/utils';
 	import clsx from 'clsx';
-	import type { Snippet } from 'svelte';
 
-	type BoundedProps = { children: Snippet; tag?: string; className?: string };
+	type BoundedProps = PropsWithChildren<{ tag?: string; className?: string }>;
 
 	let { children, tag = 'section', className }: BoundedProps = $props();
 
