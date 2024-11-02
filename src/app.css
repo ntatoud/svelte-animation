@@ -10,4 +10,7 @@
     font-weight: 400;
     src: url('./fonts/poppins-v21-latin-regular.woff2') format('woff2');
   }
-  
+
+body {
+   @apply bg-gray-950 text-gray-50
+}
