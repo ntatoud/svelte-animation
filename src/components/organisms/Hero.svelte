@@ -1,8 +1,12 @@
 <script lang="ts">
-	import LinkButton from '#components/atoms/LinkButton.svelte';
-	import HeroPicture from '#assets/hero-picture.jpg';
+	/**
+	 * Import assets
+	 */
 	import Bounded from '#components/atoms/Bounded.svelte';
+	import HeroPicture from '#assets/hero-picture.jpg';
+
 	import TriangleGrid from '#components/molecules/TriangleGrid.svelte';
+	import LinkButton from '#components/atoms/LinkButton.svelte';
 </script>
 
 <Bounded>

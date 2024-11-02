@@ -44,9 +44,7 @@
 		The new <GoldText>Gold Standard</GoldText>.
 	</h2>
 	<div class="mx-auto mt-6 max-w-md text-balance text-center text-gray-300">
-		<p class="">
-			Introducing a new way of creating dynamic content that leaves everything else in the dust.
-		</p>
+		Introducing a new way of creating dynamic content that leaves everything else in the dust.
 	</div>
 
 	<div class="mt-16 grid max-w-4xl grid-rows-[auto_auto_auto] gap-8 md:grid-cols-3 md:gap-10">
