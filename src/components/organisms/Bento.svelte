@@ -26,15 +26,15 @@
 		{
 			title: 'Aesthetic Excellence',
 			body: 'Never worry about costly CGI again, now you can get all the benefits of a film studio with our generative tech.',
-			image: SelectAnEmailPicture,
-			altImage: 'Select an email again',
+			image: ProjectUpdatePicture,
+			altImage: 'Project update again',
 			isWide: true
 		},
 		{
 			title: 'Aesthetic Excellence',
 			body: 'Our features power your next big project, whether it’s a short or a feature film.',
-			image: ProjectUpdatePicture,
-			altImage: 'Project update again'
+			image: SelectAnEmailPicture,
+			altImage: 'Select an email again'
 		}
 	];
 </script>
