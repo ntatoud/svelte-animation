@@ -10,6 +10,7 @@ const config = {
 	kit: {
 		alias: {
 			'#components/*': './src/components/*',
+			'#icons/*': './src/components/icons/*',
 			'#lib/*': './src/lib/*',
 			'#assets/*': './src/lib/assets/*'
 		},
