@@ -1,15 +1,21 @@
 <script lang="ts">
+	/**
+	 * Import assets
+	 */
 	import BackgroundImage from '#assets/background.jpg';
-	import Bounded from '#components/atoms/Bounded.svelte';
-	import LogoBackground from '#components/atoms/LogoBackground.svelte';
-	import StylizedLogoMark from '#components/atoms/StylizedLogoMark.svelte';
 	import DockerIcon from '#icons/Docker.svelte';
 	import GithubIcon from '#icons/Github.svelte';
 	import NpmIcon from '#icons/Npm.svelte';
 	import SvelteIcon from '#icons/Svelte.svelte';
 	import TailwindIcon from '#icons/Tailwind.svelte';
 	import TypescriptIcon from '#icons/Typescript.svelte';
+
+	import { onMount } from 'svelte';
 	import clsx from 'clsx';
+	import gsap from 'gsap';
+	import LogoBackground from '#components/atoms/LogoBackground.svelte';
+	import StylizedLogoMark from '#components/atoms/StylizedLogoMark.svelte';
+	import Bounded from '#components/atoms/Bounded.svelte';
 
 	const integrationsIcons = [
 		DockerIcon,
@@ -19,6 +25,72 @@
 		TailwindIcon,
 		TypescriptIcon
 	];
+
+	onMount(() => {
+		const tl = gsap.timeline({
+			repeat: -1,
+			defaults: { ease: 'power2.inOut' }
+		});
+
+		tl.to('.pulsing-logo', {
+			keyframes: [
+				{
+					filter: 'brightness(2)',
+					opacity: 1,
+					duration: 0.4,
+					ease: 'power2.in'
+				},
+				{
+					filter: 'brightness(1)',
+					opacity: 0.7,
+					duration: 0.9
+				}
+			]
+		});
+
+		tl.to(
+			'.signal-line',
+			{
+				keyframes: [
+					{ backgroundPosition: '0% 0%' },
+					{
+						backgroundPosition: '100% 100%',
+						duration: 1,
+						stagger: {
+							from: 'center',
+							each: 0.3
+						}
+					}
+				]
+			},
+			'-=1.4'
+		);
+
+		tl.to(
+			'.pulsing-icon',
+			{
+				keyframes: [
+					{
+						opacity: 1,
+						duration: 1,
+						stagger: {
+							from: 'center',
+							each: 0.3
+						}
+					},
+					{
+						opacity: 0.4,
+						duration: 1,
+						stagger: {
+							from: 'center',
+							each: 0.3
+						}
+					}
+				]
+			},
+			'-=2'
+		);
+	});
 </script>
 
 <Bounded className="relative overflow-hidden">
