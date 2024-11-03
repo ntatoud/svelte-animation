@@ -5,7 +5,7 @@
 
 <header>
 	<nav
-		class="flex flex-col items-center justify-between gap-6 px-8 py-7 md:flex-row"
+		class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-8 py-7 md:flex-row"
 		aria-label="Main"
 	>
 		<a href="/">

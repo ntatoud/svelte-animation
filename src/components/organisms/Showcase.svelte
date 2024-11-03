@@ -4,18 +4,55 @@
 	 */
 	import ShowcasePicture from '#assets/showcase-picture.png';
 
+	import { onMount } from 'svelte';
+	import clsx from 'clsx';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import Bounded from '#components/atoms/Bounded.svelte';
 	import LinkButton from '#components/atoms/LinkButton.svelte';
 	import SettingsIcon from '#components/icons/Settings.svelte';
-	import clsx from 'clsx';
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		gsap.fromTo(
+			'.showcase__heading',
+			{ y: 100 },
+			{
+				y: 0,
+				ease: 'power2.inOut',
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.showcase__heading',
+					start: 'top bottom-=40%',
+					toggleActions: 'play pause resume reverse'
+				}
+			}
+		);
+		gsap.fromTo(
+			'.showcase__glow',
+			{ scale: 0.7, opacity: 0.1 },
+			{
+				scale: 1,
+				opacity: 0.35,
+				ease: 'power2.inOut',
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.showcase__heading',
+					start: 'top bottom-=40%',
+					toggleActions: 'play pause resume reverse'
+				}
+			}
+		);
+	});
 </script>
 
 <Bounded>
 	<!-- Purple glow -->
 	<div
-		class="absolute -z-10 aspect-video w-full max-w-2xl rounded-full bg-violet-500/40 mix-blend-screen blur-[120px] filter"
+		class="showcase__glow absolute -z-10 aspect-video w-full max-w-2xl rounded-full bg-violet-500 mix-blend-screen blur-[120px] filter"
 	></div>
-	<h2 class="max-w-3xl text-balance text-center text-5xl font-medium md:text-7xl">
+	<h2 class="showcase__heading max-w-3xl text-balance text-center text-5xl font-medium md:text-7xl">
 		Your videos. <br /> Your workflow.
 	</h2>
 	<div
