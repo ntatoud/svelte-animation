@@ -13,6 +13,9 @@
 	import SettingsIcon from '#components/icons/Settings.svelte';
 
 	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (prefersReducedMotion) return;
+
 		gsap.registerPlugin(ScrollTrigger);
 
 		gsap.fromTo(

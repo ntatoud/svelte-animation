@@ -27,6 +27,9 @@
 	];
 
 	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (prefersReducedMotion) return;
+
 		const tl = gsap.timeline({
 			repeat: -1,
 			defaults: { ease: 'power2.inOut' }

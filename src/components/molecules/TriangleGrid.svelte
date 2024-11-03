@@ -5,6 +5,13 @@
 	const grid = [14, 30];
 
 	onMount(() => {
+		const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		if (prefersReducedMotion) {
+			gsap.set('#triangle-grid', { opacity: 1 });
+			gsap.set('.triangle-grid-item', { opacity: 0.2, scale: 1 });
+			return;
+		}
+
 		gsap.set('.triangle-grid-item', {
 			opacity: 0,
 			transformOrigin: 'center',
